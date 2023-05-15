@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="#D6D6D6"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/break_name"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Name:"
+                android:textSize="18dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:text="ADD"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/black"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/break_tb"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/break_name"
+                android:layout_alignParentEnd="true"
+                android:hint="Break name"
+                android:padding="5dp"
+                android:background="@drawable/rectangle"/>
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/break_name"
+                android:layout_centerHorizontal="true">
+
+                <NumberPicker
+                    android:id="@+id/hours_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text=":" />
+
+                <NumberPicker
+                    android:id="@+id/minutes_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text=":" />
+
+                <NumberPicker
+                    android:id="@+id/seconds_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
